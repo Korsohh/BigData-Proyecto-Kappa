@@ -11,11 +11,19 @@ Productor (Python) → Kafka (topic) → Spark Streaming (ventanas) → CSV/SQLi
 Pasos
 
 1. Preparar el entorno
--Instalar Java (JDK), Python y Spark en Windows (Spark necesita winutils y HADOOP_HOME).
+- Instalar y abrir Docker Desktop para Windows.
+- Instalar Java (JDK), Python y Spark en Windows (Spark necesita winutils y HADOOP_HOME).
+- En una terminal, desde la carpeta del proyecto, iniciar Kafka con `docker compose up -d`.
+- Verificar el contenedor con `docker compose ps`; consultar sus registros con `docker compose logs -f kafka`.
+- Crear el topic de eventos una sola vez:
+	`docker compose exec kafka /opt/kafka/bin/kafka-topics.sh --create --topic eventos --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1 --config retention.ms=604800000`
+- Confirmar que existe con:
+	`docker compose exec kafka /opt/kafka/bin/kafka-topics.sh --list --bootstrap-server localhost:9092`
+- Instalar las dependencias de Python cuando exista el archivo de requisitos: `pip install -r requirements.txt`.
 
--Levantar Kafka con Docker (docker-compose.yml).
+Kafka queda disponible para los programas Python ejecutados en Windows en `localhost:9092`. Los datos del broker se conservan en el volumen Docker `kafka_data`, incluso después de detener los contenedores con `docker compose down`; no elimines ese volumen si necesitas reprocesar el historial.
 
--Instalar dependencias: pip install -r requirements.txt.
+Para detener Kafka: `docker compose down`.
 
 3. Definir los datos
 
