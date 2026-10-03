@@ -36,7 +36,7 @@ Para detener Kafka: `docker compose down`.
 - Configuración previa en Windows:
   1. Seleccionar Python 3.12 en VS Code: presionar `Ctrl + Shift + P`, escribir y seleccionar `Python: Select Interpreter`, y elegir Python 3.12.
   2. Limpiar versiones previas con el comando: `py -3.12 -m pip uninstall kafka kafka-python kafka-python-ng -y`
-  3. Instalar librería Kafka de la forma corta `py -3.12 -m pip install kafka-python-ng` o con ruta completa `& 'C:\Users\anton\AppData\Local\Programs\Python\Python312\python.exe' -m pip install kafka-python-ng`
+  3. Instalar librería Kafka de la forma corta `py -3.12 -m pip install kafka-python-ng`
   4. Iniciar la depuración para ver los datos generados.
 
 - src/producer.py: envía un evento cada segundo al topic de Kafka.
