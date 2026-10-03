@@ -1,0 +1,13 @@
+# Archivos temporales de Spark y Kafka
+checkpoints/
+output/
+__pycache__/
+*.pyc
+
+# Archivos de entorno virtual 
+venv/
+.env
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
