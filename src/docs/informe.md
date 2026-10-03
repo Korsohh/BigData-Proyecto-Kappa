@@ -28,6 +28,4 @@ Se modificó la lógica de agregación (ventanas de 30s) y se leyó el historial
 *Evidencia 4: Pantallazo del reprocesamiento exitoso.*
 
 ## Resolución de Problemas y Tips
-1. **Traducciones automáticas en GitHub:** Se detectó que el navegador traducía palabras reservadas (ej. `import` a `importar`), corrompiendo los scripts. *Solución:* Editar en modo crudo o usar IDE local.
-2. **Dependencias de Spark en Windows:** [Tus compañeros deben rellenar si tuvieron problemas con winutils].
-3. **Manejo de Offsets:** [Tus compañeros deben rellenar qué pasó al cambiar de latest a earliest].
+
