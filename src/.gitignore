@@ -1,0 +1,13 @@
+#Python
+__pycache__/
+*.pyc
+venv/
+env/
+
+#Spark y Checkpoints (Archivos temporales)
+checkpoint/
+spark-warehouse/
+.ivy2/
+
+#Entorno de Windows
+.DS_Store
